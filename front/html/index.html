@@ -3,17 +3,72 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Probablemnt la plateforme de e-commerce d'ours en peluche la plus incroyable" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Style CSS -->
 		<link href="../css/style.css" rel="stylesheet" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Oniroco-ours : l'e-commerce de l'ours en peluche</title>
+		<!-- FontAwesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+		<title>OnirocOurs : l'e-commerce de l'ours en peluche</title>
 	</head>
+
 	<body>
-		<header><h1>Bobby</h1></header>
+		<header>
+			<div class="header-info">
+				<div class="header-info__links">
+					<div class="header-info__links--home">
+						<a href="./index.html"><i class="fas fa-home"></i>Accueil</a>
+					</div>
+					<div class="header-info__links--basket">
+						<a href="./cart.html"><i class="fas fa-shopping-basket"></i>Panier</a>
+					</div>
+				</div>
+				<nav>
+					<ul class="header-info__contact">
+						<li class="header-info__contact--tel"><i class="fas fa-phone"></i>06 66 42 07 13</li>
+						<li class="header-info__contact--mail"><i class="fas fa-envelope"></i>onirocours@mail.com</li>
+						<li class="header-info__contact--adress"><i class="fas fa-search-location"></i>42 Rue de l'Ours</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header-links">
+				<h1>OnirocOurs</h1>
+			</div>
+			<div class="header-banner">
+				<img src="../img/banner.jpg" alt="Des ours en peluches posey" />
+			</div>
+		</header>
+
+		<main>
+			<div class="product-presentation">
+				<h2>Les Ours Peluche</h2>
+				<p>OnirocOurs vous propose une selection d'ours en peluche digne des plus grand Teddy Bear. Doux et fluffy tel un nuage, laissez vous flotter contre son confortable pelage 🧸.</p>
+			</div>
+			<section id="items">
+				<!-- Inject javascript data -->
+				<!-- 
+                    <a href="api-link">
+                        <article>
+                            <img src="api-img-src" alt="api-img-alt">
+                            <h3>api-title</h3>
+                            <p>api-description</p>
+                        </article>
+                    </a>
+                -->
+			</section>
+		</main>
+
+		<footer>
+			<div class="footer-info">
+				<div class="footer-info__contact"></div>
+				<div class="footer-info__partners-links"></div>
+			</div>
+			<div class="footer-copyright">© Copyright 2021 - 2042 | Openclassrooms | All Rights Reserved | Powered by ❤️</div>
+		</footer>
+
 		<script src="../js/script.js"></script>
 	</body>
 </html>
