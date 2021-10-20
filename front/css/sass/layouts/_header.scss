@@ -8,7 +8,9 @@ header {
 		justify-content: space-between;
 		padding: 1em 1em 0 1em;
 		height: 5em;
-		background: linear-gradient(180deg, rgba(216, 162, 101, 0.5) 30%, rgba(0, 0, 0, 0) 100%);
+		background: linear-gradient(180deg, rgba(216, 162, 101, 0.7) 30%, rgba(0, 0, 0, 0) 100%);
+		backdrop-filter: blur(2px);
+		-webkit-backdrop-filter: blur(2px);
 		&__links {
 			@extend .flex-row;
 			a {

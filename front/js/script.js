@@ -1,3 +1,7 @@
+/***
+API CONFIGURATION
+***/
+
 // Get array of all teddy bear information
 async function getTheBears() {
 	try {
@@ -19,7 +23,7 @@ async function renderBears() {
                 <img src="${bear.imageUrl}" alt="Photo d'un petit ours en peluche.">
                 <div class="bear-preview__info">
                     <h3 class="bear-preview__info--productName">${bear.name}</h3>
-                    <p class="bear-preview__info--productPrice">${bear.price}</p>
+                    <p class="bear-preview__info--productPrice">${(bear.price / 100).toFixed(2)}€</p>
                 </div>
             </article>
         </a>
@@ -31,3 +35,7 @@ async function renderBears() {
 }
 
 renderBears();
+
+/*** 
+BEAR ANIMATION
+**/

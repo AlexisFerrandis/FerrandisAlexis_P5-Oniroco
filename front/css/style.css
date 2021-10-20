@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
-.flex-center, header .header-title {
+.flex-center, footer .footer-copyright, header .header-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,6 +38,7 @@
   border-radius: 0.5em;
   -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.55);
   box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.25);
+  transition: 300ms;
 }
 #items .bear-preview img {
   width: 100%;
@@ -55,6 +56,9 @@
   font-weight: 600;
   color: #311607;
 }
+#items .bear-preview:hover {
+  transform: scale(1.02);
+}
 
 header {
   width: 100%;
@@ -66,7 +70,9 @@ header .header-info {
   justify-content: space-between;
   padding: 1em 1em 0 1em;
   height: 5em;
-  background: linear-gradient(180deg, rgba(216, 162, 101, 0.5) 30%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(180deg, rgba(216, 162, 101, 0.7) 30%, rgba(0, 0, 0, 0) 100%);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 header .header-info__links a {
   margin-right: 1em;
@@ -91,6 +97,29 @@ header .header-banner img {
   width: 100%;
   max-height: 42em;
   object-fit: cover;
+}
+
+footer {
+  padding: 1em 2em;
+  background-color: #d8a265;
+}
+footer .footer-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+footer .footer-info__contact li {
+  margin-bottom: 0.3em;
+}
+footer .footer-info__partners-links h4 {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+footer i {
+  width: 1.3em;
+}
+footer .footer-copyright {
+  font-size: 0.9em;
 }
 
 #home-main {
