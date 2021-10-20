@@ -11,13 +11,41 @@
 	}
 	&__settings {
 		display: flex;
-		padding: 1em;
+		justify-content: space-between;
+		padding: 1em 2em 0;
+		&--price {
+			span {
+				font-size: 1.5em;
+				color: $color-secondary;
+			}
+		}
+		.bear-quantity,
+		.bear-color {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 1em;
+			line-height: 1.5em;
+		}
+		input {
+			width: 50%;
+		}
+		input,
+		select {
+			border: none;
+			border-bottom: 1px solid black;
+			padding: 0.3em;
+			&::placeholder {
+				color: $color-light-grey;
+			}
+		}
 	}
 	&__description {
 		text-align: center;
 		padding: 1em;
+		color: $color-secondary;
 	}
 	&__add-to-cart {
 		@extend .flex-center;
+		padding-bottom: 1em;
 	}
 }

@@ -11,6 +11,7 @@ header {
 		background: linear-gradient(180deg, rgba(216, 162, 101, 0.7) 30%, rgba(0, 0, 0, 0) 100%);
 		backdrop-filter: blur(2px);
 		-webkit-backdrop-filter: blur(2px);
+		color: $color-secondary;
 		z-index: 9;
 		&__links {
 			@extend .flex-row;
@@ -57,9 +58,9 @@ header {
 			animation: bear-movement 25s infinite ease;
 			.bear-anim {
 				position: absolute;
-				width: 59px;
-				height: 32px;
-				bottom: 0.2em;
+				width: 80px;
+				height: 62px;
+				bottom: 0em;
 				animation: bear-anim 1s infinite none;
 			}
 		}
@@ -68,25 +69,25 @@ header {
 
 @keyframes bear-anim {
 	0% {
-		background-image: url(./../img/polar-bear-1.png);
+		background-image: url(./../img/bear-1.png);
 	}
 	1% {
-		background-image: url(./../img/polar-bear-2.png);
+		background-image: url(./../img/bear-2.png);
 	}
 	33% {
-		background-image: url(./../img/polar-bear-2.png);
+		background-image: url(./../img/bear-2.png);
 	}
 	34% {
-		background-image: url(./../img/polar-bear-3.png);
+		background-image: url(./../img/bear-3.png);
 	}
 	65% {
-		background-image: url(./../img/polar-bear-3.png);
+		background-image: url(./../img/bear-3.png);
 	}
 	66% {
-		background-image: url(./../img/polar-bear-1.png);
+		background-image: url(./../img/bear-1.png);
 	}
 	100% {
-		background-image: url(./../img/polar-bear-1.png);
+		background-image: url(./../img/bear-1.png);
 	}
 }
 

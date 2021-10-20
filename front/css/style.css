@@ -39,6 +39,22 @@
 /* font-family: 'Lobster', cursive; */
 /* font-family: 'Poppins', sans-serif; */
 /* font-family: 'Lato', sans-serif; */
+button {
+  padding: 1em 2em;
+  background-color: #311607;
+  font-family: "Poppins";
+  border: none;
+  border-radius: 0.5em;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 300ms;
+}
+button:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
 #items {
   flex-wrap: wrap;
   width: 100%;
@@ -85,12 +101,42 @@
 }
 .bear-information__settings {
   display: flex;
-  padding: 1em;
+  justify-content: space-between;
+  padding: 1em 2em 0;
+}
+.bear-information__settings--price span {
+  font-size: 1.5em;
+  color: #311607;
+}
+.bear-information__settings .bear-quantity,
+.bear-information__settings .bear-color {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+.bear-information__settings input {
+  width: 50%;
+}
+.bear-information__settings input,
+.bear-information__settings select {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0.3em;
+}
+.bear-information__settings input::placeholder,
+.bear-information__settings select::placeholder {
+  color: #978c7c;
 }
 .bear-information__description {
   text-align: center;
   padding: 1em;
+  color: #311607;
 }
+.bear-information__add-to-cart {
+  padding-bottom: 1em;
+}
+
 header {
   width: 100%;
   position: relative;
@@ -104,6 +150,7 @@ header .header-info {
   background: linear-gradient(180deg, rgba(216, 162, 101, 0.7) 30%, rgba(0, 0, 0, 0) 100%);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+  color: #311607;
   z-index: 9;
 }
 header .header-info__links a {
@@ -137,33 +184,33 @@ header .header-banner .bear-movement {
 }
 header .header-banner .bear-movement .bear-anim {
   position: absolute;
-  width: 59px;
-  height: 32px;
-  bottom: 0.2em;
+  width: 80px;
+  height: 62px;
+  bottom: 0em;
   animation: bear-anim 1s infinite none;
 }
 
 @keyframes bear-anim {
   0% {
-    background-image: url(./../img/polar-bear-1.png);
+    background-image: url(./../img/bear-1.png);
   }
   1% {
-    background-image: url(./../img/polar-bear-2.png);
+    background-image: url(./../img/bear-2.png);
   }
   33% {
-    background-image: url(./../img/polar-bear-2.png);
+    background-image: url(./../img/bear-2.png);
   }
   34% {
-    background-image: url(./../img/polar-bear-3.png);
+    background-image: url(./../img/bear-3.png);
   }
   65% {
-    background-image: url(./../img/polar-bear-3.png);
+    background-image: url(./../img/bear-3.png);
   }
   66% {
-    background-image: url(./../img/polar-bear-1.png);
+    background-image: url(./../img/bear-1.png);
   }
   100% {
-    background-image: url(./../img/polar-bear-1.png);
+    background-image: url(./../img/bear-1.png);
   }
 }
 @keyframes bear-movement {
@@ -175,7 +222,7 @@ header .header-banner .bear-movement .bear-anim {
   }
 }
 footer {
-  padding: 1em 2em;
+  padding: 2em;
   background-color: #d8a265;
 }
 footer .footer-info {

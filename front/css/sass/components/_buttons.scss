@@ -1,0 +1,15 @@
+button {
+	padding: 1em 2em;
+	background-color: $color-secondary;
+	font-family: "Poppins";
+	border: none;
+	border-radius: 0.5em;
+	color: white;
+	font-size: 1em;
+	cursor: pointer;
+	transition: $short-anim;
+	&:hover {
+		opacity: 0.95;
+		transform: scale(1.02);
+	}
+}

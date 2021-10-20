@@ -45,13 +45,13 @@ async function renderItem() {
                     </div>
                     <div class="bear-information__settings--qte-clr">
                         <div class="bear-quantity">
-                            <label for="itemQuantity">Nombre d'article(s) :</label>
-                            <input type="number" name="itemQuantity" min="1" max="100" value="0" id="quantity" />
+                            <label for="itemQuantity">Nombre d'article(s)</label>
+                            <input type="number" name="itemQuantity" min="1" max="100" value="1" id="quantity" />
                         </div>
                         <div class="bear-color">
-                        <label for="color-select">Choisir une couleur :</label>
+                        <label for="color-select">Couleur</label>
 							<select name="color-select" id="colors">
-								<option value="">Couleur de l'ours</option>
+								<option value="">Choisir une couleur</option>
 								<!--<option value="vert">vert</option>
                                 <option value="blanc">blanc</option> -->
 							</select>
@@ -59,7 +59,7 @@ async function renderItem() {
                     </div>
                 </div>
                 <div class="bear-information__description">
-                    <p>${bear.description}</p>
+                    <p>${bear.description}<br/> 🧸</p>
                 </div>
                 <div class="bear-information__add-to-cart">
                     <button id="bear-information__add-to-cart--add-btn">Ajouter</button>
@@ -71,5 +71,10 @@ async function renderItem() {
 
 	let bearContainer = document.getElementById("product-main");
 	bearContainer.innerHTML += renderHTML;
+
+	// Choice of bear colors
+	bear.colors.forEach((color) => {
+		document.getElementById("colors").innerHTML += `<option value="${color}">${color}</option>`;
+	});
 }
 renderItem();
