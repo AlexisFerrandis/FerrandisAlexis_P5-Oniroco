@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
-.flex-center, footer .footer-copyright, header .header-title {
+.flex-center, footer .footer-copyright, header .header-title, #items {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-row, header .header-info__contact, header .header-info__links, header .header-info {
+.flex-row, header .header-info__links, header .header-info {
   display: flex;
   flex-direction: row;
 }
@@ -28,7 +28,6 @@
 /* font-family: 'Poppins', sans-serif; */
 /* font-family: 'Lato', sans-serif; */
 #items {
-  display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -73,15 +72,13 @@ header .header-info {
   background: linear-gradient(180deg, rgba(216, 162, 101, 0.7) 30%, rgba(0, 0, 0, 0) 100%);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+  z-index: 9;
 }
 header .header-info__links a {
   margin-right: 1em;
 }
 header .header-info__links a:hover {
   text-decoration: underline;
-}
-header .header-info__contact li {
-  margin-left: 1em;
 }
 header .header-info i {
   width: 1.3em;
@@ -91,14 +88,60 @@ header .header-title h1 {
   font-weight: 600;
   font-size: 4em;
   color: #311607;
-  margin: 1em 0 0.3em;
+  margin: 1.1em 0 0.3em;
+}
+header .header-banner {
+  position: relative;
+  overflow-x: hidden;
 }
 header .header-banner img {
   width: 100%;
   max-height: 42em;
   object-fit: cover;
 }
+header .header-banner .bear-movement {
+  position: absolute;
+  animation: bear-movement 20s infinite ease;
+}
+header .header-banner .bear-movement .bear-anim {
+  position: absolute;
+  width: 59px;
+  height: 32px;
+  bottom: 0.2em;
+  animation: bear-anim 1s infinite none;
+}
 
+@keyframes bear-anim {
+  0% {
+    background-image: url(./../img/polar-bear-1.png);
+  }
+  1% {
+    background-image: url(./../img/polar-bear-2.png);
+  }
+  33% {
+    background-image: url(./../img/polar-bear-2.png);
+  }
+  34% {
+    background-image: url(./../img/polar-bear-3.png);
+  }
+  65% {
+    background-image: url(./../img/polar-bear-3.png);
+  }
+  66% {
+    background-image: url(./../img/polar-bear-1.png);
+  }
+  100% {
+    background-image: url(./../img/polar-bear-1.png);
+  }
+}
+@keyframes bear-movement {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 110%;
+  }
+}
 footer {
   padding: 1em 2em;
   background-color: #d8a265;
@@ -108,17 +151,21 @@ footer .footer-info {
   justify-content: space-between;
   margin-bottom: 2em;
 }
+footer .footer-info h4 {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
 footer .footer-info__contact li {
   margin-bottom: 0.3em;
 }
-footer .footer-info__partners-links h4 {
-  font-weight: 600;
-  margin-bottom: 0.5em;
+footer .footer-info__partners-links a:hover {
+  text-decoration: underline;
 }
 footer i {
   width: 1.3em;
 }
 footer .footer-copyright {
+  text-align: center;
   font-size: 0.9em;
 }
 

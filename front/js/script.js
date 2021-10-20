@@ -35,7 +35,3 @@ async function renderBears() {
 }
 
 renderBears();
-
-/*** 
-BEAR ANIMATION
-**/

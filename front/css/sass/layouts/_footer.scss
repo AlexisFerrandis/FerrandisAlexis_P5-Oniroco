@@ -5,13 +5,16 @@ footer {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 2em;
+		h4 {
+			font-weight: 600;
+			margin-bottom: 0.5em;
+		}
 		&__contact li {
 			margin-bottom: 0.3em;
 		}
 		&__partners-links {
-			h4 {
-				font-weight: 600;
-				margin-bottom: 0.5em;
+			a:hover {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -20,6 +23,7 @@ footer {
 	}
 	.footer-copyright {
 		@extend .flex-center;
+		text-align: center;
 		font-size: 0.9em;
 	}
 }
