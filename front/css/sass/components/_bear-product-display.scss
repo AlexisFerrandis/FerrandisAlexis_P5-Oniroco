@@ -1,0 +1,23 @@
+.bear-information {
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+	border-radius: 1em;
+	@extend .box-shadow;
+	&__image img {
+		width: 100%;
+		max-height: 30em;
+		@extend .img-parameters;
+	}
+	&__settings {
+		display: flex;
+		padding: 1em;
+	}
+	&__description {
+		text-align: center;
+		padding: 1em;
+	}
+	&__add-to-cart {
+		@extend .flex-center;
+	}
+}

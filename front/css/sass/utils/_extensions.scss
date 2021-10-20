@@ -16,6 +16,17 @@
 	transform: translate(-50%, -50%);
 }
 
+.box-shadow {
+	-webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.15);
+	box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.15);
+}
+
+.img-parameters {
+	object-fit: cover;
+	object-position: center;
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+}
 .pseudo-elt {
 	position: absolute;
 	content: "";
