@@ -1,0 +1,46 @@
+header {
+	width: 100%;
+	position: relative;
+	.header-info {
+		@extend .flex-row;
+		justify-content: space-between;
+		padding: 1em 1em 0 1em;
+		height: 5em;
+		background: linear-gradient(180deg, rgba(216, 162, 101, 0.5) 30%, rgba(0, 0, 0, 0) 100%);
+		&__links {
+			@extend .flex-row;
+			a {
+				margin-right: 1em;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		&__contact {
+			@extend .flex-row;
+			li {
+				margin-left: 1em;
+			}
+		}
+		i {
+			width: 1.3em;
+		}
+	}
+	.header-title {
+		@extend .flex-center;
+		h1 {
+			font-family: "Lobster", cursive;
+			font-weight: 600;
+			font-size: 4em;
+			color: $color-secondary;
+			margin-bottom: 0.3em;
+		}
+	}
+	.header-banner {
+		img {
+			width: 100%;
+			max-height: 42em;
+			object-fit: cover;
+		}
+	}
+}

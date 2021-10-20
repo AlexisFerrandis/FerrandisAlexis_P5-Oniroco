@@ -1,5 +1,164 @@
-h1 {
-  color: pink;
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+.flex-center, header .header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row, header .header-info__contact, header .header-info__links, header .header-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pseudo-elt, #home-main .product-presentation p::after, #home-main .product-presentation h2::after, #home-main .product-presentation h2::before {
+  position: absolute;
+  content: "";
+}
+
+/* font-family: 'Lobster', cursive; */
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Lato', sans-serif; */
+header {
+  width: 100%;
+  position: relative;
+}
+header .header-info {
+  justify-content: space-between;
+  padding: 1em 1em 0 1em;
+  height: 5em;
+  background: linear-gradient(180deg, rgba(216, 162, 101, 0.5) 30%, rgba(0, 0, 0, 0) 100%);
+}
+header .header-info__links a {
+  margin-right: 1em;
+}
+header .header-info__links a:hover {
+  text-decoration: underline;
+}
+header .header-info__contact li {
+  margin-left: 1em;
+}
+header .header-info i {
+  width: 1.3em;
+}
+header .header-title h1 {
+  font-family: "Lobster", cursive;
+  font-weight: 600;
+  font-size: 4em;
+  color: #311607;
+  margin-bottom: 0.3em;
+}
+header .header-banner img {
+  width: 100%;
+  max-height: 42em;
+  object-fit: cover;
+}
+
+#home-main {
+  padding: 2em;
+}
+#home-main .product-presentation {
+  text-align: center;
+}
+#home-main .product-presentation h2 {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.7em;
+  font-size: 2em;
+  font-weight: 500;
+  color: #311607;
+}
+#home-main .product-presentation h2::before {
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 20%;
+  background-color: #311607;
+}
+#home-main .product-presentation h2::after {
+  top: 50%;
+  right: 0;
+  height: 1px;
+  width: 20%;
+  background-color: #311607;
+}
+#home-main .product-presentation p {
+  position: relative;
+  font-size: 1.1em;
+  margin-bottom: 3em;
+}
+#home-main .product-presentation p span {
+  font-weight: 600;
+  color: #311607;
+}
+#home-main .product-presentation p::after {
+  left: 5%;
+  bottom: -1.5em;
+  height: 1px;
+  width: 90%;
+  background-color: #311607;
+}
+#home-main .search-input {
+  padding: 1em 0;
+}
+#home-main .search-input i,
+#home-main .search-input input {
+  font-size: 1em;
+}
+#home-main .search-input input {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 150px;
+  padding: 0.3em;
+  margin-left: 1em;
+}
+#home-main .search-input input::placeholder {
+  color: #978c7c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  color: black;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #67330d;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #935720;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 0px;
+  box-shadow: inset 0px 0px 0px 0px #f0f0f0;
 }
 
 /*# sourceMappingURL=style.css.map */

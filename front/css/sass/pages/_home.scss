@@ -1,0 +1,64 @@
+#home-main {
+	padding: 2em;
+	.product-presentation {
+		text-align: center;
+		h2 {
+			position: relative;
+			font-family: "Poppins", sans-serif;
+			margin-bottom: 0.7em;
+			font-size: 2em;
+			font-weight: 500;
+			color: $color-secondary;
+			&::before {
+				@extend .pseudo-elt;
+				top: 50%;
+				left: 0;
+				height: 1px;
+				width: 20%;
+				background-color: $color-secondary;
+			}
+			&::after {
+				@extend .pseudo-elt;
+				top: 50%;
+				right: 0;
+				height: 1px;
+				width: 20%;
+				background-color: $color-secondary;
+			}
+		}
+		p {
+			position: relative;
+			font-size: 1.1em;
+			margin-bottom: 3em;
+			span {
+				font-weight: 600;
+				color: $color-secondary;
+			}
+			&::after {
+				@extend .pseudo-elt;
+				left: 5%;
+				bottom: -1.5em;
+				height: 1px;
+				width: 90%;
+				background-color: $color-secondary;
+			}
+		}
+	}
+	.search-input {
+		padding: 1em 0;
+		i,
+		input {
+			font-size: 1em;
+		}
+		input {
+			border: none;
+			border-bottom: 1px solid black;
+			width: 150px;
+			padding: 0.3em;
+			margin-left: 1em;
+			&::placeholder {
+				color: $color-light-grey;
+			}
+		}
+	}
+}
