@@ -197,16 +197,22 @@ header .header-banner .bear-movement .bear-anim {
   1% {
     background-image: url(./../img/bear-2.png);
   }
-  33% {
+  24% {
     background-image: url(./../img/bear-2.png);
   }
-  34% {
+  25% {
     background-image: url(./../img/bear-3.png);
   }
-  65% {
+  49% {
     background-image: url(./../img/bear-3.png);
   }
-  66% {
+  50% {
+    background-image: url(./../img/bear-2.png);
+  }
+  74% {
+    background-image: url(./../img/bear-2.png);
+  }
+  75% {
     background-image: url(./../img/bear-1.png);
   }
   100% {

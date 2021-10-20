@@ -93,10 +93,10 @@ function toLocalStorage() {
 		let bearColor = document.getElementById("colors").value;
 		let bearQuantity = document.getElementById("quantity").value;
 
-		if (bearColor == "") {
-			alert("Il faut choisir une couleur à cet ours !");
-		} else if (bearQuantity == 0) {
-			alert("Impossible d'ajouter 0 ours !");
+		if (bearQuantity == 0) {
+			alert("Impossible d'ajouter 0 ours 🐻 !");
+		} else if (bearColor == "") {
+			alert("Il faut choisir une couleur à cet ours 🐻 !");
 		} else {
 			let bearInCart = [bearId, bearColor];
 
