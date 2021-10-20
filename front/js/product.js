@@ -25,7 +25,8 @@ async function getIdBear() {
 		console.log("Error : " + error);
 	}
 }
-async function renderItem() {
+
+async function renderBear() {
 	let bear = await getIdBear();
 	let renderHTML = "";
 	let bearInformation = `
@@ -52,8 +53,6 @@ async function renderItem() {
                         <label for="color-select">Couleur</label>
 							<select name="color-select" id="colors">
 								<option value="">Choisir une couleur</option>
-								<!--<option value="vert">vert</option>
-                                <option value="blanc">blanc</option> -->
 							</select>
                         </div>
                     </div>
@@ -62,7 +61,7 @@ async function renderItem() {
                     <p>${bear.description}<br/> 🧸</p>
                 </div>
                 <div class="bear-information__add-to-cart">
-                    <button id="bear-information__add-to-cart--add-btn">Ajouter</button>
+                    <button id="add-to-cart">Ajouter</button>
                 </div>
             </article>
         </section>
@@ -72,9 +71,37 @@ async function renderItem() {
 	let bearContainer = document.getElementById("product-main");
 	bearContainer.innerHTML += renderHTML;
 
-	// Choice of bear colors
+	// Choice of bear color loop
 	bear.colors.forEach((color) => {
 		document.getElementById("colors").innerHTML += `<option value="${color}">${color}</option>`;
 	});
+
+	// Settings to local storage
+	toLocalStorage();
 }
-renderItem();
+renderBear();
+
+/*** 
+LOCALSTORAGE INFORMATIONS
+***/
+
+// Add to cart & localStorage
+function toLocalStorage() {
+	const addToBtn = document.getElementById("add-to-cart");
+	addToBtn.addEventListener("click", () => {
+		let bearId = getIdInUrl();
+		let bearColor = document.getElementById("colors").value;
+		let bearQuantity = document.getElementById("quantity").value;
+
+		if (bearColor == "") {
+			alert("Il faut choisir une couleur à cet ours !");
+		} else if (bearQuantity == 0) {
+			alert("Impossible d'ajouter 0 ours !");
+		} else {
+			let bearInCart = [bearId, bearColor];
+
+			localStorage.setItem(bearInCart, bearQuantity);
+			window.location.href = "./cart.html";
+		}
+	});
+}
