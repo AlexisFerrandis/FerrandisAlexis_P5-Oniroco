@@ -1,8 +1,6 @@
-/***
-API CONFIGURATION
-***/
+/*** API CONFIGURATION ***/
 
-// Get array of all teddy bear information
+// Get all teddy bear information
 async function getTheBears() {
 	try {
 		let response = await fetch("http://localhost:3000/api/teddies");
@@ -13,7 +11,7 @@ async function getTheBears() {
 }
 
 // Render the bears on home page
-async function renderBears() {
+(async function renderBears() {
 	let allBears = await getTheBears();
 	let renderHTML = "";
 	allBears.forEach((bear) => {
@@ -30,8 +28,6 @@ async function renderBears() {
         `;
 		renderHTML += bearPreview;
 	});
-	let bearContainer = document.getElementById("items");
+	const bearContainer = document.getElementById("items");
 	bearContainer.innerHTML += renderHTML;
-}
-
-renderBears();
+})();

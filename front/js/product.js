@@ -1,12 +1,7 @@
-/*** 
-Bear render on product page
-***/
-
-// Looking for id in the page url
+// Looking for id in the url page
 function getIdInUrl() {
 	let url = new URL(window.location.href);
 	let searchParam = new URLSearchParams(url.search);
-
 	if (searchParam.has("id")) {
 		let id = searchParam.get("id");
 		return id;
@@ -26,7 +21,8 @@ async function getIdBear() {
 	}
 }
 
-async function renderBear() {
+// Render the bear on the page
+(async function renderTheBear() {
 	let bear = await getIdBear();
 	let renderHTML = "";
 	let bearInformation = `
@@ -34,7 +30,6 @@ async function renderBear() {
             <h2>${bear.name} 🐻</h2>
             <p>${bear.description}</p>
         </div>
-
         <section id="bear-information">
             <article class="bear-information">
                 <div class="bear-information__image">
@@ -65,10 +60,10 @@ async function renderBear() {
                 </div>
             </article>
         </section>
-`;
+		`;
 	renderHTML += bearInformation;
 
-	let bearContainer = document.getElementById("product-main");
+	const bearContainer = document.getElementById("product-main");
 	bearContainer.innerHTML += renderHTML;
 
 	// Choice of bear color loop
@@ -76,30 +71,23 @@ async function renderBear() {
 		document.getElementById("colors").innerHTML += `<option value="${color}">${color}</option>`;
 	});
 
-	// Settings to local storage
-	toLocalStorage();
-}
-renderBear();
-
-/*** 
-LOCALSTORAGE INFORMATIONS
-***/
+	// After load, enable add to cart fct
+	bearToLocalSorage();
+})();
 
 // Add to cart & localStorage
-function toLocalStorage() {
+function bearToLocalSorage() {
 	const addToBtn = document.getElementById("add-to-cart");
 	addToBtn.addEventListener("click", () => {
 		let bearId = getIdInUrl();
 		let bearColor = document.getElementById("colors").value;
 		let bearQuantity = document.getElementById("quantity").value;
-
 		if (bearQuantity == 0) {
 			alert("Impossible d'ajouter 0 ours 🐻 !");
 		} else if (bearColor == "") {
 			alert("Il faut choisir une couleur à cet ours 🐻 !");
 		} else {
 			let bearInCart = [bearId, bearColor];
-
 			localStorage.setItem(bearInCart, bearQuantity);
 			window.location.href = "./cart.html";
 		}
