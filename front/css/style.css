@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
-.flex-center, footer .footer-copyright, header .header-title, .bear-information__add-to-cart, #items {
+.flex-center, footer .footer-copyright, header .header-title, .cart-bear__content--settings-quantity, .bear-information__add-to-cart, #items {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,21 +19,28 @@
   transform: translate(-50%, -50%);
 }
 
-.box-shadow, .bear-information, #items .bear-preview {
+.box-shadow, .cart-bear__img img, .bear-information, #items .bear-preview {
   -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.15);
   box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.15);
 }
 
-.img-parameters, .bear-information__image img, #items .bear-preview img {
+.img-parameters, .cart-bear__img img, .bear-information__image img, #items .bear-preview img {
   object-fit: cover;
   object-position: center;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
 }
 
-.pseudo-elt, main .product-presentation p::after, main .product-presentation h2::after, main .product-presentation h2::before, #items .bear-preview__info--productName::after {
+.pseudo-elt, main .product-presentation p::after, main .product-presentation h2::after, main .product-presentation h2::before, .cart-bear::after, #items .bear-preview__info--productName::after {
   position: absolute;
   content: "";
+}
+
+.input-select, .cart-bear__content--settings-quantity input, .bear-information__settings input,
+.bear-information__settings select {
+  border: none;
+  padding: 0.3em;
+  border-bottom: 1px solid black;
 }
 
 /* font-family: 'Lobster', cursive; */
@@ -118,12 +125,6 @@ button:hover {
 .bear-information__settings input {
   width: 50%;
 }
-.bear-information__settings input,
-.bear-information__settings select {
-  border: none;
-  border-bottom: 1px solid black;
-  padding: 0.3em;
-}
 .bear-information__settings input::placeholder,
 .bear-information__settings select::placeholder {
   color: #978c7c;
@@ -135,6 +136,50 @@ button:hover {
 }
 .bear-information__add-to-cart {
   padding-bottom: 1em;
+}
+
+.cart-bear {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 3em;
+}
+.cart-bear::after {
+  height: 1px;
+  width: 100%;
+  bottom: -1.5em;
+  background-color: #d8a265;
+}
+.cart-bear__img img {
+  width: 385px;
+  height: 250px;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  transition: 300ms;
+}
+.cart-bear__img img:hover {
+  transform: scale(1.02);
+}
+.cart-bear__content {
+  width: 180px;
+  text-align: center;
+}
+.cart-bear__content--title-price {
+  margin-bottom: 1em;
+}
+.cart-bear__content--title-price h2 {
+  font-weight: 600;
+  color: #311607;
+}
+.cart-bear__content--settings-color {
+  margin-bottom: 1em;
+}
+.cart-bear__content--settings-delete p:hover {
+  cursor: pointer;
+  font-weight: 600;
 }
 
 header {

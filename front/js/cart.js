@@ -23,11 +23,15 @@ async function getBearInfoWithId(i) {
 		let bearHTMLContent = `
         <article class="cart-bear" data-id="${bearInfo._id}" data-color="${bearColor}" data-price="${bearInfo.price}">
             <div class="cart-bear__img">
-                <img src="${bearInfo.imageUrl}" alt="Photo d'un petit ours">
+                <a href="http://127.0.0.1:5500/front/html/product.html?id=${bearInfo._id}">
+                    <img src="${bearInfo.imageUrl}" alt="Photo d'un petit ours">
+                </a>
             </div>
             <div class="cart-bear__content">
                 <div class="cart-bear__content--title-price">
-                    <h2>${bearInfo.name}</h2>
+                    <a href="http://127.0.0.1:5500/front/html/product.html?id=${bearInfo._id}">
+                        <h2>${bearInfo.name}</h2>
+                    </a
                     <p>${(bearInfo.price / 100).toFixed(2)}€</p>
                 </div>
                 <div class="cart-bear__content--settings">
