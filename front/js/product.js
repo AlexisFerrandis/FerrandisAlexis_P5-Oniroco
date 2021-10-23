@@ -87,8 +87,8 @@ function bearToLocalSorage() {
 		} else if (bearColor == "") {
 			alert("Il faut choisir une couleur à cet ours 🐻 !");
 		} else {
-			let bearInCart = [bearId, bearColor];
-			localStorage.setItem(bearInCart, bearQuantity);
+			let bearSpecification = [bearQuantity, bearColor];
+			localStorage.setItem(bearId, bearSpecification);
 			window.location.href = "./cart.html";
 		}
 	});
