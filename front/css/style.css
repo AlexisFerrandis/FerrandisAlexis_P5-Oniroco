@@ -159,6 +159,7 @@ button:hover {
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   transition: 300ms;
+  margin-bottom: 1em;
 }
 .cart-bear__img img:hover {
   transform: scale(1.02);

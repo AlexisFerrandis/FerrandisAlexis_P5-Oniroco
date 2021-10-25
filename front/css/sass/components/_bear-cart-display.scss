@@ -21,6 +21,7 @@
 		border-bottom-left-radius: 0.5em;
 		border-bottom-right-radius: 0.5em;
 		transition: $short-anim;
+		margin-bottom: 1em;
 		&:hover {
 			transform: scale(1.02);
 		}
