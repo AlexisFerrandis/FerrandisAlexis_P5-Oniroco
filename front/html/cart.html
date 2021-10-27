@@ -48,7 +48,9 @@
 		</header>
 
 		<main id="cart-main">
-			<section id="bearsContainer"></section>
+			<section id="bearsContainer">
+				<!-- API response here -->
+			</section>
 			<section id="cartInfo">
 				<div id="totalQuantity"></div>
 				<div id="totalPrice"></div>
@@ -56,32 +58,32 @@
 			<section id="userForm">
 				<form method="get" class="cart__order__form">
 					<div class="cart__order__form__question">
-						<label for="firstName">Prénom: </label>
-						<input type="text" name="firstName" id="firstName" required />
+						<label for="firstName">Prénom : <br /></label>
+						<input type="text" name="firstName" id="firstName" required placeholder="George" />
 						<p id="firstNameErrorMsg"><!-- ci est un message d'erreur --></p>
 					</div>
 					<div class="cart__order__form__question">
-						<label for="lastName">Nom: </label>
-						<input type="text" name="lastName" id="lastName" required />
+						<label for="lastName">Nom : <br /></label>
+						<input type="text" name="lastName" id="lastName" required placeholder="Dupond" />
 						<p id="lastNameErrorMsg"></p>
 					</div>
 					<div class="cart__order__form__question">
-						<label for="address">Adresse: </label>
-						<input type="text" name="address" id="address" required />
+						<label for="address">Adresse : <br /></label>
+						<input type="text" name="address" id="address" required placeholder="42 Rue de l'ours" />
 						<p id="addressErrorMsg"></p>
 					</div>
 					<div class="cart__order__form__question">
-						<label for="city">Ville: </label>
-						<input type="text" name="city" id="city" required />
+						<label for="city">Ville : <br /></label>
+						<input type="text" name="city" id="city" required placeholder="Teddy-Town" />
 						<p id="cityErrorMsg"></p>
 					</div>
 					<div class="cart__order__form__question">
-						<label for="email">Email: </label>
-						<input type="email" name="email" id="email" required />
+						<label for="email">Email : <br /></label>
+						<input type="email" name="email" id="email" required placeholder="bear@mail.com" />
 						<p id="emailErrorMsg"></p>
 					</div>
 					<div class="cart__order__form__submit">
-						<input type="submit" value="Commander !" id="order" />
+						<button type="submit" id="order">Commander</button>
 					</div>
 				</form>
 			</section>

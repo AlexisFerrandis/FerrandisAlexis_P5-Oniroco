@@ -93,7 +93,7 @@ function totalBearActualisation() {
 		bearAmount += parseInt(quantitySelect[i].value);
 	}
 	const totalQuantityToDOM = document.getElementById("totalQuantity");
-	totalQuantityToDOM.innerHTML = "Nombre d'ours : " + bearAmount;
+	totalQuantityToDOM.innerHTML = "Nombre d'ours : " + bearAmount + ` ours.`;
 
 	// Total price actualisation
 	totalPriceActualisation();

@@ -1,0 +1,41 @@
+#cartInfo {
+	position: relative;
+	@extend .flex-center;
+	flex-direction: column;
+	max-width: 1100px;
+	#totalQuantity {
+		font-size: 1.5em;
+		margin-bottom: 1em;
+	}
+	#totalPrice {
+		font-size: 1.5em;
+	}
+	&::after {
+		@extend .pseudo-elt;
+		height: 1px;
+		width: 90%;
+		bottom: -1.5em;
+		background-color: $color-primary;
+	}
+}
+
+#userForm {
+	@extend .flex-center;
+	max-width: 1100px;
+	@extend .box-shadow;
+	margin: 4em auto 0;
+	padding: 1em 0;
+	border-radius: 0.5em;
+	input {
+		@extend .input-select;
+		margin-bottom: 1em;
+		&::placeholder {
+			color: $color-light-grey;
+		}
+	}
+	p {
+		color: red;
+		margin-bottom: 1em;
+		text-align: center;
+	}
+}
